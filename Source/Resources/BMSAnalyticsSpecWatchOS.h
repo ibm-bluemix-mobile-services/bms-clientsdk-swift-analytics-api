@@ -12,14 +12,14 @@
 */
 
 
-#import <UIKit/UIKit.h>
+#import <WatchKit/WatchKit.h>
 
-//! Project version number for BMSAnalyticsSpec.
-FOUNDATION_EXPORT double BMSAnalyticsSpecVersionNumber;
+//! Project version number for BMSAnalyticsSpecWatchOS.
+FOUNDATION_EXPORT double BMSAnalyticsSpecWatchOSVersionNumber;
 
-//! Project version string for BMSAnalyticsSpec.
-FOUNDATION_EXPORT const unsigned char BMSAnalyticsSpecVersionString[];
+//! Project version string for BMSAnalyticsSpecWatchOS.
+FOUNDATION_EXPORT const unsigned char BMSAnalyticsSpecWatchOSVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <BMSAnalyticsSpec/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <BMSAnalyticsSpecWatchOS/PublicHeader.h>
 
 
