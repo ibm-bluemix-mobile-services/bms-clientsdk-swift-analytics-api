@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import BMSAnalyticsSpec
+//@testable import BMSAnalyticsSpec
 
 class BMSAnalyticsSpecTests: XCTestCase {
     

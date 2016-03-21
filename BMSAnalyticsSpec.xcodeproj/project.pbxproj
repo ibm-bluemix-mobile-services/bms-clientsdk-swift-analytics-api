@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		922CD6741CA08E00002E29C0 /* BMSAnalyticsSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6731CA08E00002E29C0 /* BMSAnalyticsSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		922CD67B1CA08E00002E29C0 /* BMSAnalyticsSpec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922CD6701CA08E00002E29C0 /* BMSAnalyticsSpec.framework */; };
-		922CD6801CA08E00002E29C0 /* BMSAnalyticsSpecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD67F1CA08E00002E29C0 /* BMSAnalyticsSpecTests.swift */; };
+		922CD6991CA08F03002E29C0 /* BMSAnalyticsSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6971CA08F03002E29C0 /* BMSAnalyticsSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		922CD6A91CA090EA002E29C0 /* BMSAnalyticsSpecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6A41CA090D1002E29C0 /* BMSAnalyticsSpecTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +24,11 @@
 
 /* Begin PBXFileReference section */
 		922CD6701CA08E00002E29C0 /* BMSAnalyticsSpec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMSAnalyticsSpec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		922CD6731CA08E00002E29C0 /* BMSAnalyticsSpec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMSAnalyticsSpec.h; sourceTree = "<group>"; };
-		922CD6751CA08E00002E29C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		922CD67A1CA08E00002E29C0 /* BMSAnalyticsSpecTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BMSAnalyticsSpecTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		922CD67F1CA08E00002E29C0 /* BMSAnalyticsSpecTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMSAnalyticsSpecTests.swift; sourceTree = "<group>"; };
-		922CD6811CA08E00002E29C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		922CD6971CA08F03002E29C0 /* BMSAnalyticsSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSAnalyticsSpec.h; sourceTree = "<group>"; };
+		922CD6981CA08F03002E29C0 /* Info_iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_iOS.plist; sourceTree = "<group>"; };
+		922CD6A41CA090D1002E29C0 /* BMSAnalyticsSpecTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSAnalyticsSpecTests.swift; sourceTree = "<group>"; };
+		922CD6A61CA090D1002E29C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +53,8 @@
 		922CD6661CA08E00002E29C0 = {
 			isa = PBXGroup;
 			children = (
-				922CD6721CA08E00002E29C0 /* BMSAnalyticsSpec */,
-				922CD67E1CA08E00002E29C0 /* BMSAnalyticsSpecTests */,
+				922CD6951CA08F03002E29C0 /* Source */,
+				922CD6A11CA090D1002E29C0 /* Tests */,
 				922CD6711CA08E00002E29C0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,22 +68,54 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		922CD6721CA08E00002E29C0 /* BMSAnalyticsSpec */ = {
+		922CD6951CA08F03002E29C0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				922CD6731CA08E00002E29C0 /* BMSAnalyticsSpec.h */,
-				922CD6751CA08E00002E29C0 /* Info.plist */,
+				922CD6961CA08F03002E29C0 /* Resources */,
 			);
-			path = BMSAnalyticsSpec;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		922CD67E1CA08E00002E29C0 /* BMSAnalyticsSpecTests */ = {
+		922CD6961CA08F03002E29C0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				922CD67F1CA08E00002E29C0 /* BMSAnalyticsSpecTests.swift */,
-				922CD6811CA08E00002E29C0 /* Info.plist */,
+				922CD6971CA08F03002E29C0 /* BMSAnalyticsSpec.h */,
+				922CD6981CA08F03002E29C0 /* Info_iOS.plist */,
 			);
-			path = BMSAnalyticsSpecTests;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		922CD6A11CA090D1002E29C0 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				922CD6A31CA090D1002E29C0 /* Unit Tests */,
+				922CD6A21CA090D1002E29C0 /* Test Apps */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		922CD6A21CA090D1002E29C0 /* Test Apps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Test Apps";
+			sourceTree = "<group>";
+		};
+		922CD6A31CA090D1002E29C0 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				922CD6A41CA090D1002E29C0 /* BMSAnalyticsSpecTests.swift */,
+				922CD6A51CA090D1002E29C0 /* Resources */,
+			);
+			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
+		922CD6A51CA090D1002E29C0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				922CD6A61CA090D1002E29C0 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +125,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922CD6741CA08E00002E29C0 /* BMSAnalyticsSpec.h in Headers */,
+				922CD6991CA08F03002E29C0 /* BMSAnalyticsSpec.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922CD6801CA08E00002E29C0 /* BMSAnalyticsSpecTests.swift in Sources */,
+				922CD6A91CA090EA002E29C0 /* BMSAnalyticsSpecTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +344,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = BMSAnalyticsSpec/Info.plist;
+				INFOPLIST_FILE = Source/Resources/Info_iOS.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsSpec;
@@ -328,7 +360,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = BMSAnalyticsSpec/Info.plist;
+				INFOPLIST_FILE = Source/Resources/Info_iOS.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsSpec;
@@ -340,7 +372,7 @@
 		922CD6881CA08E00002E29C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = BMSAnalyticsSpecTests/Info.plist;
+				INFOPLIST_FILE = "Tests/Unit Tests/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsSpecTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,7 +382,7 @@
 		922CD6891CA08E00002E29C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = BMSAnalyticsSpecTests/Info.plist;
+				INFOPLIST_FILE = "Tests/Unit Tests/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsSpecTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -376,6 +408,7 @@
 				922CD6861CA08E00002E29C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		922CD6871CA08E00002E29C0 /* Build configuration list for PBXNativeTarget "BMSAnalyticsSpecTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +417,7 @@
 				922CD6891CA08E00002E29C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
