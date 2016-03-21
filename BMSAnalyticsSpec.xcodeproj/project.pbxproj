@@ -10,10 +10,15 @@
 		922CD67B1CA08E00002E29C0 /* BMSAnalyticsSpec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922CD6701CA08E00002E29C0 /* BMSAnalyticsSpec.framework */; };
 		922CD6991CA08F03002E29C0 /* BMSAnalyticsSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6971CA08F03002E29C0 /* BMSAnalyticsSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		922CD6A91CA090EA002E29C0 /* BMSAnalyticsSpecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6A41CA090D1002E29C0 /* BMSAnalyticsSpecTests.swift */; };
-		922CD6BD1CA0964A002E29C0 /* BMSAnalyticsSpecWatchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6B91CA095EA002E29C0 /* BMSAnalyticsSpecWatchOS.h */; };
+		922CD6BD1CA0964A002E29C0 /* BMSAnalyticsSpecWatchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6B91CA095EA002E29C0 /* BMSAnalyticsSpecWatchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		922CD6BF1CA09837002E29C0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6BE1CA09837002E29C0 /* Logger.swift */; };
 		922CD6C11CA09B5A002E29C0 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C01CA09B5A002E29C0 /* LoggerTests.swift */; };
 		922CD6C31CA09C6F002E29C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C21CA09C6F002E29C0 /* Constants.swift */; };
+		922CD6C51CA0AA54002E29C0 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C41CA0AA54002E29C0 /* Analytics.swift */; };
+		922CD6C61CA0AA54002E29C0 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C41CA0AA54002E29C0 /* Analytics.swift */; };
+		922CD6C71CA0AA57002E29C0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6BE1CA09837002E29C0 /* Logger.swift */; };
+		922CD6C91CA0AAC6002E29C0 /* Analytics+watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C81CA0AAC6002E29C0 /* Analytics+watchOS.swift */; };
+		922CD6CA1CA0AEFC002E29C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C21CA09C6F002E29C0 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +44,8 @@
 		922CD6BE1CA09837002E29C0 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		922CD6C01CA09B5A002E29C0 /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
 		922CD6C21CA09C6F002E29C0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		922CD6C41CA0AA54002E29C0 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		922CD6C81CA0AAC6002E29C0 /* Analytics+watchOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Analytics+watchOS.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +96,10 @@
 		922CD6951CA08F03002E29C0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				922CD6BE1CA09837002E29C0 /* Logger.swift */,
 				922CD6C21CA09C6F002E29C0 /* Constants.swift */,
+				922CD6BE1CA09837002E29C0 /* Logger.swift */,
+				922CD6C41CA0AA54002E29C0 /* Analytics.swift */,
+				922CD6C81CA0AAC6002E29C0 /* Analytics+watchOS.swift */,
 				922CD6961CA08F03002E29C0 /* Resources */,
 			);
 			path = Source;
@@ -288,6 +297,7 @@
 			files = (
 				922CD6BF1CA09837002E29C0 /* Logger.swift in Sources */,
 				922CD6C31CA09C6F002E29C0 /* Constants.swift in Sources */,
+				922CD6C51CA0AA54002E29C0 /* Analytics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +314,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				922CD6C91CA0AAC6002E29C0 /* Analytics+watchOS.swift in Sources */,
+				922CD6C61CA0AA54002E29C0 /* Analytics.swift in Sources */,
+				922CD6C71CA0AA57002E29C0 /* Logger.swift in Sources */,
+				922CD6CA1CA0AEFC002E29C0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -477,6 +492,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
@@ -486,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

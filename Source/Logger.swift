@@ -119,10 +119,6 @@ public class Logger {
     // Each logger instance is distinguished only by its "name" property
     internal static var loggerInstances: [String: Logger] = [:]
     
-    // Internal instrumentation for troubleshooting issues in BMSCore
-    internal static let internalLogger = Logger.loggerForName(Constants.Package.logger)
-    
-    
     // Used to persist all logs to the device's file system
     // Public access required by MFPAnalytics framework
     // This will obtain a value when the Analytics class from MFPAnalytics is initialized
@@ -201,7 +197,7 @@ public class Logger {
     }
     
     /**
-     Log at the Error LogLevel.
+         Log at the Error LogLevel.
      
          - parameter message: The message to log
          
@@ -233,7 +229,7 @@ public class Logger {
      */
     public static func send(completionHandler userCallback: AnyObject? = nil) {
         
-        // TODO: Passthrough to BMSAnalytics using reflection
+        // TODO: Passthrough to BMSAnalytics
     }
     
     
@@ -257,7 +253,7 @@ public class Logger {
             Logger.printLogToConsole(message, loggerName: self.name, level: level, calledFunction: calledFunction, calledFile: calledFile, calledLineNumber: calledLineNumber)
         }
         
-        // TODO: Replace with passthrough to BMSAnalytics using reflection
+        // TODO: Replace with passthrough to BMSAnalytics
         
         Logger.logRecorder?.logMessageToFile(message, level: level, loggerName: self.name, calledFile: calledFile, calledFunction: calledFunction, calledLineNumber: calledLineNumber, additionalMetadata: additionalMetadata)
     }
