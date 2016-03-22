@@ -48,6 +48,8 @@ public enum LogLevel: Int {
 // This protocol is implemented in the MFPAnalytics framework
 public protocol LogRecorderProtocol {
     
+    var isUncaughtExceptionDetected: Bool { get set }
+    
     func logMessageToFile(message: String, level: LogLevel, loggerName: String, calledFile: String, calledFunction: String, calledLineNumber: Int, additionalMetadata: [String: AnyObject]?)
 }
 
@@ -114,10 +116,10 @@ public class Logger {
     /// This property will be set back to `false` if the logs are sent to the server.
     public static var isUncaughtExceptionDetected: Bool {
         get {
-            return NSUserDefaults.standardUserDefaults().boolForKey(Constants.uncaughtException)
+            return Logger.logRecorder?.isUncaughtExceptionDetected ?? false
         }
         set {
-            NSUserDefaults.standardUserDefaults().setBool(newValue, forKey: Constants.uncaughtException)
+            Logger.logRecorder?.isUncaughtExceptionDetected = isUncaughtExceptionDetected
         }
     }
     

@@ -28,8 +28,9 @@ public enum DeviceEvent {
 // This protocol is implemented in the MFPAnalytics framework
 public protocol AnalyticsImplementation {
     
+    var userIdentity: String? { get set }
+    
     func initialize(appName appName: String?, apiKey: String?, deviceEvents: [DeviceEvent])
-    func updateUserIdentity(userIdentity: String?) -> String
     func logSessionStart()
     func logSessionEnd()
 }
@@ -56,7 +57,7 @@ public class Analytics {
     /// To reset the userId, set the value to nil.
     public static var userIdentity: String? {
         didSet {
-            userIdentity = Analytics.analyticsImplementer?.updateUserIdentity(userIdentity)
+            Analytics.analyticsImplementer?.userIdentity = userIdentity
         }
     }
     
@@ -68,7 +69,7 @@ public class Analytics {
     // Public access required by MFPAnalytics framework, which is required to initialize this property
     internal static var analyticsImplementer: AnalyticsImplementation?
     
-    internal static let logger = Logger.loggerForName(Constants.Package.analytics)
+    internal static let logger = Logger.loggerForName(Logger.mfpLoggerPrefix + "analytics")
     
     
     
