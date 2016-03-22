@@ -52,6 +52,15 @@ public protocol LogRecorderProtocol {
 }
 
 
+// Sends logs to the analytics server
+// This protocol is implemented in the MFPAnalytics framework
+public protocol LogSenderProtocol {
+    
+    func send(completionHandler userCallback: AnyObject?)
+    func sendAnalytics(completionHandler userCallback: AnyObject?)
+}
+
+
 /**
     `Logger` provides a wrapper to Swift's `print()` function, with additional information such as the file, function, and line where the log was called.
     It supports logging at different levels of verbosity (see the `LogLevel` enum) and filtering by `LogLevel` to limit the log output to the console.
@@ -116,13 +125,16 @@ public class Logger {
     
     // MARK: Properties (internal)
     
+    // Used to persist all logs to the device's file system
+    // Public access required by MFPAnalytics framework, which is required to initialize this property
+    public static var logRecorder: LogRecorderProtocol?
+    
+    // Used to send logs to the analytics server
+    // Public access required by MFPAnalytics framework, which is required to initialize this property
+    public static var logSender: LogSenderProtocol?
+    
     // Each logger instance is distinguished only by its "name" property
     internal static var loggerInstances: [String: Logger] = [:]
-    
-    // Used to persist all logs to the device's file system
-    // Public access required by MFPAnalytics framework
-    // This will obtain a value when the Analytics class from MFPAnalytics is initialized
-    public static var logRecorder: LogRecorderProtocol?
     
     // Prefix for all internal logger names
     public static let mfpLoggerPrefix = "mfpsdk."
@@ -229,7 +241,17 @@ public class Logger {
      */
     public static func send(completionHandler userCallback: AnyObject? = nil) {
         
-        // TODO: Passthrough to BMSAnalytics
+        Logger.logSender?.send(completionHandler: userCallback)
+    }
+    
+    
+    
+    // MARK: Analytics
+    
+    // Equivalent to the other log methods, but this method accepts data as JSON rather than a string
+    internal func analytics(metadata: [String: AnyObject], file: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
+        
+        logMessage("", level: LogLevel.Analytics, calledFile: file, calledFunction: function, calledLineNumber: line, additionalMetadata: metadata)
     }
     
     
@@ -252,8 +274,6 @@ public class Logger {
             // Print to console
             Logger.printLogToConsole(message, loggerName: self.name, level: level, calledFunction: calledFunction, calledFile: calledFile, calledLineNumber: calledLineNumber)
         }
-        
-        // TODO: Replace with passthrough to BMSAnalytics
         
         Logger.logRecorder?.logMessageToFile(message, level: level, loggerName: self.name, calledFile: calledFile, calledFunction: calledFunction, calledLineNumber: calledLineNumber, additionalMetadata: additionalMetadata)
     }

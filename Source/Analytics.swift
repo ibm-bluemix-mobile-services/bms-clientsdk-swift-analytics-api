@@ -52,6 +52,12 @@ public class Analytics {
     
     
     
+    // MARK: Properties (internal/private)
+    
+    internal static let logger = Logger.loggerForName(Constants.Package.analytics)
+    
+    
+    
     // MARK: Methods (public)
     
     
@@ -81,7 +87,7 @@ public class Analytics {
      */
     public static func log(metadata: [String: AnyObject]) {
         
-        // TODO: Passthrough to BMSAnalytics
+        Analytics.logger.analytics(metadata)
     }
     
     
@@ -94,7 +100,7 @@ public class Analytics {
      */
     public static func send(completionHandler userCallback: AnyObject? = nil) {
         
-        // TODO: Passthrough to BMSAnalytics
+        Logger.logSender?.sendAnalytics(completionHandler: userCallback)
     }
     
 }
