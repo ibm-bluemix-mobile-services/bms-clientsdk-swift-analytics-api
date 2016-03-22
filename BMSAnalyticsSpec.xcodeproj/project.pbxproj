@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		922CD67B1CA08E00002E29C0 /* BMSAnalyticsSpec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922CD6701CA08E00002E29C0 /* BMSAnalyticsSpec.framework */; };
 		922CD6991CA08F03002E29C0 /* BMSAnalyticsSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6971CA08F03002E29C0 /* BMSAnalyticsSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		922CD6A91CA090EA002E29C0 /* BMSAnalyticsSpecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6A41CA090D1002E29C0 /* BMSAnalyticsSpecTests.swift */; };
 		922CD6BD1CA0964A002E29C0 /* BMSAnalyticsSpecWatchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6B91CA095EA002E29C0 /* BMSAnalyticsSpecWatchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		922CD6BF1CA09837002E29C0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6BE1CA09837002E29C0 /* Logger.swift */; };
 		922CD6C11CA09B5A002E29C0 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C01CA09B5A002E29C0 /* LoggerTests.swift */; };
@@ -36,7 +35,6 @@
 		922CD67A1CA08E00002E29C0 /* BMSAnalyticsSpecTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BMSAnalyticsSpecTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		922CD6971CA08F03002E29C0 /* BMSAnalyticsSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSAnalyticsSpec.h; sourceTree = "<group>"; };
 		922CD6981CA08F03002E29C0 /* Info_iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_iOS.plist; sourceTree = "<group>"; };
-		922CD6A41CA090D1002E29C0 /* BMSAnalyticsSpecTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSAnalyticsSpecTests.swift; sourceTree = "<group>"; };
 		922CD6A61CA090D1002E29C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		922CD6B11CA095B7002E29C0 /* BMSAnalyticsSpecWatchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMSAnalyticsSpecWatchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922CD6B91CA095EA002E29C0 /* BMSAnalyticsSpecWatchOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSAnalyticsSpecWatchOS.h; sourceTree = "<group>"; };
@@ -135,9 +133,8 @@
 		922CD6A31CA090D1002E29C0 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
-				922CD6A41CA090D1002E29C0 /* BMSAnalyticsSpecTests.swift */,
-				922CD6A51CA090D1002E29C0 /* Resources */,
 				922CD6C01CA09B5A002E29C0 /* LoggerTests.swift */,
+				922CD6A51CA090D1002E29C0 /* Resources */,
 			);
 			path = "Unit Tests";
 			sourceTree = "<group>";
@@ -305,7 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922CD6A91CA090EA002E29C0 /* BMSAnalyticsSpecTests.swift in Sources */,
 				922CD6C11CA09B5A002E29C0 /* LoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
