@@ -25,6 +25,16 @@ public enum DeviceEvent {
 }
 
 
+// This protocol is implemented in the MFPAnalytics framework
+public protocol AnalyticsImplementation {
+    
+    func initialize(appName appName: String?, apiKey: String?, deviceEvents: [DeviceEvent])
+    func updateUserIdentity(userIdentity: String?) -> String
+    func logSessionStart()
+    func logSessionEnd()
+}
+
+
 /**
     `Analytics` provides a means of capturing analytics data and sending the data to the mobile analytics service.
 */
@@ -46,13 +56,17 @@ public class Analytics {
     /// To reset the userId, set the value to nil.
     public static var userIdentity: String? {
         didSet {
-            // TODO: Passthrough to BMSAnalytics
+            userIdentity = Analytics.analyticsImplementer?.updateUserIdentity(userIdentity)
         }
     }
     
     
     
     // MARK: Properties (internal/private)
+    
+    // Handles all internal implementation of the Analytics class
+    // Public access required by MFPAnalytics framework, which is required to initialize this property
+    internal static var analyticsImplementer: AnalyticsImplementation?
     
     internal static let logger = Logger.loggerForName(Constants.Package.analytics)
     
@@ -72,7 +86,7 @@ public class Analytics {
     */
     public static func initializeForBluemix(appName appName: String?, apiKey: String?, deviceEvents: DeviceEvent...) {
         
-        // TODO: Passthrough to BMSAnalytics
+        Analytics.analyticsImplementer?.initialize(appName: appName, apiKey: apiKey, deviceEvents: deviceEvents)
     }
     
     

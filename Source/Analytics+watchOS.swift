@@ -26,7 +26,7 @@ public extension Analytics {
      */
     public static func recordApplicationDidBecomeActive() {
         
-        // TODO: Passthrough to BMSAnalytics logSessionStart()
+        Analytics.analyticsImplementer?.logSessionStart()
     }
     
     
@@ -38,7 +38,7 @@ public extension Analytics {
      */
     public static func recordApplicationWillResignActive() {
         
-        // TODO: Passthrough to BMSAnalytics logSessionEnd()
+        Analytics.analyticsImplementer?.logSessionEnd()
     }
     
 }
