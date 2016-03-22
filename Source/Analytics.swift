@@ -26,7 +26,7 @@ public enum DeviceEvent {
 
 
 // This protocol is implemented in the MFPAnalytics framework
-public protocol AnalyticsDelegate: class {
+public protocol AnalyticsDelegate {
     
     var userIdentity: String? { get set }
     
