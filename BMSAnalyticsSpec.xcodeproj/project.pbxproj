@@ -15,7 +15,6 @@
 		922CD6C51CA0AA54002E29C0 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C41CA0AA54002E29C0 /* Analytics.swift */; };
 		922CD6C61CA0AA54002E29C0 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C41CA0AA54002E29C0 /* Analytics.swift */; };
 		922CD6C71CA0AA57002E29C0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6BE1CA09837002E29C0 /* Logger.swift */; };
-		922CD6C91CA0AAC6002E29C0 /* Analytics+watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C81CA0AAC6002E29C0 /* Analytics+watchOS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +39,6 @@
 		922CD6BE1CA09837002E29C0 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		922CD6C01CA09B5A002E29C0 /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
 		922CD6C41CA0AA54002E29C0 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
-		922CD6C81CA0AAC6002E29C0 /* Analytics+watchOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Analytics+watchOS.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +91,6 @@
 			children = (
 				922CD6BE1CA09837002E29C0 /* Logger.swift */,
 				922CD6C41CA0AA54002E29C0 /* Analytics.swift */,
-				922CD6C81CA0AAC6002E29C0 /* Analytics+watchOS.swift */,
 				922CD6961CA08F03002E29C0 /* Resources */,
 			);
 			path = Source;
@@ -305,7 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922CD6C91CA0AAC6002E29C0 /* Analytics+watchOS.swift in Sources */,
 				922CD6C61CA0AA54002E29C0 /* Analytics.swift in Sources */,
 				922CD6C71CA0AA57002E29C0 /* Logger.swift in Sources */,
 			);
