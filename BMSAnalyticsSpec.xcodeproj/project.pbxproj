@@ -111,16 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				922CD6A31CA090D1002E29C0 /* Unit Tests */,
-				922CD6A21CA090D1002E29C0 /* Test Apps */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		922CD6A21CA090D1002E29C0 /* Test Apps */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Test Apps";
 			sourceTree = "<group>";
 		};
 		922CD6A31CA090D1002E29C0 /* Unit Tests */ = {
