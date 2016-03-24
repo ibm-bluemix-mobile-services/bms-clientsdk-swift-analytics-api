@@ -51,8 +51,8 @@ public protocol LoggerDelegate {
     var isUncaughtExceptionDetected: Bool { get set }
     
     func logMessageToFile(message: String, level: LogLevel, loggerName: String, calledFile: String, calledFunction: String, calledLineNumber: Int, additionalMetadata: [String: AnyObject]?)
-    func send(completionHandler userCallback: AnyObject?)
-    func sendAnalytics(completionHandler userCallback: AnyObject?)
+    func send(completionHandler userCallback: Any?)
+    func sendAnalytics(completionHandler userCallback: Any?)
 }
 
 
@@ -230,7 +230,7 @@ public class Logger {
          
          - parameter completionHandler:  Optional callback containing the results of the send request
      */
-    public static func send(completionHandler userCallback: AnyObject? = nil) {
+    public static func send(completionHandler userCallback: Any? = nil) {
         
         Logger.delegate?.send(completionHandler: userCallback)
     }
