@@ -24,7 +24,7 @@ class LoggerTests: XCTestCase {
     }
     
     // Cannot make any assertions since all these log methods do is print to the console
-    // More thorough unit testing for the Logger class is done in the MFPAnalytics SDK
+    // More thorough unit testing for the Logger class is done in the BMSAnalytics SDK
     func testLogMethods(){
         let fakePKG = "MYPKG"
         let loggerInstance = Logger.loggerForName(fakePKG)
