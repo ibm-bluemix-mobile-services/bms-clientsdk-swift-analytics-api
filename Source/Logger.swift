@@ -163,9 +163,79 @@ public class Logger {
     
     // MARK: Log methods (API)
     
+#if swift(>=2.2)
+    
+    /**
+     Log at the Debug LogLevel.
+     
+     - parameter message: The message to log
+     
+     - Note: Do not supply values for the `file`, `function`, or `line` parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.
+     */
+    public func debug(message: String, file: String = #file, function: String = #function, line: Int = #line) {
+        
+        logMessage(message, level: LogLevel.Debug, calledFile: file, calledFunction: function, calledLineNumber: line)
+    }
+    
+    /**
+     Log at the Info LogLevel.
+     
+     - parameter message: The message to log
+     
+     - Note: Do not supply values for the `file`, `function`, or `line` parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.
+     */
+    public func info(message: String, file: String = #file, function: String = #function, line: Int = #line) {
+        
+        logMessage(message, level: LogLevel.Info, calledFile: file, calledFunction: function, calledLineNumber: line)
+    }
+    
+    /**
+     Log at the Warn LogLevel.
+     
+     - parameter message: The message to log
+     
+     - Note: Do not supply values for the `file`, `function`, or `line` parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.
+     */
+    public func warn(message: String, file: String = #file, function: String = #function, line: Int = #line) {
+        
+        logMessage(message, level: LogLevel.Warn, calledFile: file, calledFunction: function, calledLineNumber: line)
+    }
+    
+    /**
+     Log at the Error LogLevel.
+     
+     - parameter message: The message to log
+     
+     - Note: Do not supply values for the `file`, `function`, or `line` parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.
+     */
+    public func error(message: String, file: String = #file, function: String = #function, line: Int = #line) {
+        
+        logMessage(message, level: LogLevel.Error, calledFile: file, calledFunction: function, calledLineNumber: line)
+    }
+    
+    /**
+     Log at the Fatal LogLevel.
+     
+     - parameter message: The message to log
+     
+     - Note: Do not supply values for the `file`, `function`, or `line` parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.
+     */
+    public func fatal(message: String, file: String = #file, function: String = #function, line: Int = #line) {
+        
+        logMessage(message, level: LogLevel.Fatal, calledFile: file, calledFunction: function, calledLineNumber: line)
+    }
+    
+    // Equivalent to the other log methods, but this method accepts data as JSON rather than a string
+    internal func analytics(metadata: [String: AnyObject], file: String = #file, function: String = #function, line: Int = #line) {
+        
+        logMessage("", level: LogLevel.Analytics, calledFile: file, calledFunction: function, calledLineNumber: line, additionalMetadata: metadata)
+    }
+    
+#else
+    
     /**
         Log at the Debug LogLevel.
-        
+     
         - parameter message: The message to log
         
         - Note: Do not supply values for the `file`, `function`, or `line` parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.
@@ -223,6 +293,18 @@ public class Logger {
         logMessage(message, level: LogLevel.Fatal, calledFile: file, calledFunction: function, calledLineNumber: line)
     }
     
+    // Equivalent to the other log methods, but this method accepts data as JSON rather than a string
+    internal func analytics(metadata: [String: AnyObject], file: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
+        
+        logMessage("", level: LogLevel.Analytics, calledFile: file, calledFunction: function, calledLineNumber: line, additionalMetadata: metadata)
+    }
+    
+#endif
+    
+    
+    
+    // MARK: Send
+    
     /**
          Send the accumulated logs to the Bluemix server.
          
@@ -233,16 +315,6 @@ public class Logger {
     public static func send(completionHandler userCallback: Any? = nil) {
         
         Logger.delegate?.send(completionHandler: userCallback)
-    }
-    
-    
-    
-    // MARK: Analytics
-    
-    // Equivalent to the other log methods, but this method accepts data as JSON rather than a string
-    internal func analytics(metadata: [String: AnyObject], file: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
-        
-        logMessage("", level: LogLevel.Analytics, calledFile: file, calledFunction: function, calledLineNumber: line, additionalMetadata: metadata)
     }
     
     
