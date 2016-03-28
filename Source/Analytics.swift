@@ -99,17 +99,4 @@ public class Analytics {
     
 #endif
     
-    
-    /**
-         Send the accumulated analytics logs to the Bluemix server.
-         
-         Analytics logs can only be sent if the BMSClient was initialized via the `initializeWithBluemixAppRoute()` method.
-         
-         - parameter completionHandler:  Optional callback containing the results of the send request
-     */
-    public static func send(completionHandler userCallback: Any? = nil) {
-        
-        Logger.delegate?.sendAnalytics(completionHandler: userCallback)
-    }
-    
 }

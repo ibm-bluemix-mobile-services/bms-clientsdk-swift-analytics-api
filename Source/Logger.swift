@@ -51,8 +51,6 @@ public protocol LoggerDelegate {
     var isUncaughtExceptionDetected: Bool { get set }
     
     func logMessageToFile(message: String, level: LogLevel, loggerName: String, calledFile: String, calledFunction: String, calledLineNumber: Int, additionalMetadata: [String: AnyObject]?)
-    func send(completionHandler userCallback: Any?)
-    func sendAnalytics(completionHandler userCallback: Any?)
 }
 
 
@@ -300,22 +298,6 @@ public class Logger {
     }
     
 #endif
-    
-    
-    
-    // MARK: Send
-    
-    /**
-         Send the accumulated logs to the Bluemix server.
-         
-         Logger logs can only be sent if the BMSClient was initialized via the `initializeWithBluemixAppRoute()` method.
-         
-         - parameter completionHandler:  Optional callback containing the results of the send request
-     */
-    public static func send(completionHandler userCallback: Any? = nil) {
-        
-        Logger.delegate?.send(completionHandler: userCallback)
-    }
     
     
     
