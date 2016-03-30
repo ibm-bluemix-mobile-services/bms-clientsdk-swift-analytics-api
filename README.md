@@ -1,8 +1,6 @@
 IBM Bluemix Mobile Services - AnalyticsSpec Swift SDK
 ===================================================
 
-This is the AnalyticsSpec component of the . 
-
 ## Contents
 This package contains the AnalyticsSpec components of the Swift SDK for [IBM Bluemix Mobile Services](https://console.ng.bluemix.net/docs/services/mobile.html)
 
