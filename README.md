@@ -1,14 +1,16 @@
 IBM Bluemix Mobile Services - AnalyticsSpec Swift SDK
 ===================================================
 
-This is the AnalyticsSpec component of the Swift SDK for [IBM Bluemix Mobile Services](https://console.ng.bluemix.net/docs/services/mobile.html). 
+This is the AnalyticsSpec component of the . 
 
 ## Contents
-This package contains the AnalyticsSpec components of the Swift SDK which include
+This package contains the AnalyticsSpec components of the Swift SDK for [IBM Bluemix Mobile Services](https://console.ng.bluemix.net/docs/services/mobile.html)
+
+The package includes
 
 * Logger and Analytics interfaces
 * Client side Logger implementation
-* Empty stubs server side related Logger and Analytics functionality
+* Empty stubs for server side related Logger and Analytics functionality. In order to leverage server side functionality you'll need to provision a Mobile Analytics service instance and import [BMSAnalytics SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics)
 
 ## Requirements
 * iOS 8.0+ / watchOS 2.0+
