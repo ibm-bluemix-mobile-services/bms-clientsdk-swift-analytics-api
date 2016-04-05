@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "922CD6B01CA095B7002E29C0"
-               BuildableName = "BMSAnalyticsSpecWatchOS.framework"
-               BlueprintName = "BMSAnalyticsSpecWatchOS"
-               ReferencedContainer = "container:BMSAnalyticsSpec.xcodeproj">
+               BlueprintIdentifier = "922CD66F1CA08E00002E29C0"
+               BuildableName = "BMSAnalyticsAPI.framework"
+               BlueprintName = "BMSAnalyticsAPI"
+               ReferencedContainer = "container:BMSAnalyticsAPI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "922CD6B01CA095B7002E29C0"
-            BuildableName = "BMSAnalyticsSpecWatchOS.framework"
-            BlueprintName = "BMSAnalyticsSpecWatchOS"
-            ReferencedContainer = "container:BMSAnalyticsSpec.xcodeproj">
+            BlueprintIdentifier = "922CD66F1CA08E00002E29C0"
+            BuildableName = "BMSAnalyticsAPI.framework"
+            BlueprintName = "BMSAnalyticsAPI"
+            ReferencedContainer = "container:BMSAnalyticsAPI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "922CD6B01CA095B7002E29C0"
-            BuildableName = "BMSAnalyticsSpecWatchOS.framework"
-            BlueprintName = "BMSAnalyticsSpecWatchOS"
-            ReferencedContainer = "container:BMSAnalyticsSpec.xcodeproj">
+            BlueprintIdentifier = "922CD66F1CA08E00002E29C0"
+            BuildableName = "BMSAnalyticsAPI.framework"
+            BlueprintName = "BMSAnalyticsAPI"
+            ReferencedContainer = "container:BMSAnalyticsAPI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

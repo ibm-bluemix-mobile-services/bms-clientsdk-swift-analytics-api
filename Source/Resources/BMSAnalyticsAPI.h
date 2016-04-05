@@ -14,12 +14,12 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for BMSAnalyticsSpec.
-FOUNDATION_EXPORT double BMSAnalyticsSpecVersionNumber;
+//! Project version number for BMSAnalyticsAPI.
+FOUNDATION_EXPORT double BMSAnalyticsAPIVersionNumber;
 
-//! Project version string for BMSAnalyticsSpec.
-FOUNDATION_EXPORT const unsigned char BMSAnalyticsSpecVersionString[];
+//! Project version string for BMSAnalyticsAPI.
+FOUNDATION_EXPORT const unsigned char BMSAnalyticsAPIVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <BMSAnalyticsSpec/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <BMSAnalyticsAPI/PublicHeader.h>
 
 

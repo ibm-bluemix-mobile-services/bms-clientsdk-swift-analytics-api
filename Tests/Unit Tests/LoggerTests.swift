@@ -12,7 +12,7 @@
 */
 
 import XCTest
-@testable import BMSAnalyticsSpec
+@testable import BMSAnalyticsAPI
 
 class LoggerTests: XCTestCase {
     
