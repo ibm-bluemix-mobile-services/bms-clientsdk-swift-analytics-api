@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		922CD67B1CA08E00002E29C0 /* BMSAnalyticsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922CD6701CA08E00002E29C0 /* BMSAnalyticsAPI.framework */; };
-		922CD6991CA08F03002E29C0 /* BMSAnalyticsAPI_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		922CD6BD1CA0964A002E29C0 /* BMSAnalyticsAPI_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6B91CA095EA002E29C0 /* BMSAnalyticsAPI_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		922CD6991CA08F03002E29C0 /* BMSAnalyticsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		922CD6BF1CA09837002E29C0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6BE1CA09837002E29C0 /* Logger.swift */; };
 		922CD6C11CA09B5A002E29C0 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C01CA09B5A002E29C0 /* LoggerTests.swift */; };
 		922CD6C51CA0AA54002E29C0 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C41CA0AA54002E29C0 /* Analytics.swift */; };
 		922CD6C61CA0AA54002E29C0 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C41CA0AA54002E29C0 /* Analytics.swift */; };
 		922CD6C71CA0AA57002E29C0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6BE1CA09837002E29C0 /* Logger.swift */; };
+		92369C751CB429B500674B9E /* BMSAnalyticsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,11 +30,10 @@
 /* Begin PBXFileReference section */
 		922CD6701CA08E00002E29C0 /* BMSAnalyticsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMSAnalyticsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922CD67A1CA08E00002E29C0 /* BMSAnalyticsAPI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMSAnalyticsAPI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSAnalyticsAPI_iOS.h; sourceTree = "<group>"; };
+		922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSAnalyticsAPI.h; sourceTree = "<group>"; };
 		922CD6981CA08F03002E29C0 /* Info_iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_iOS.plist; sourceTree = "<group>"; };
 		922CD6A61CA090D1002E29C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		922CD6B11CA095B7002E29C0 /* BMSAnalyticsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMSAnalyticsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		922CD6B91CA095EA002E29C0 /* BMSAnalyticsAPI_watchOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSAnalyticsAPI_watchOS.h; sourceTree = "<group>"; };
 		922CD6BB1CA095F2002E29C0 /* Info_watchOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_watchOS.plist; sourceTree = "<group>"; };
 		922CD6BE1CA09837002E29C0 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		922CD6C01CA09B5A002E29C0 /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
@@ -99,8 +98,7 @@
 		922CD6961CA08F03002E29C0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI_iOS.h */,
-				922CD6B91CA095EA002E29C0 /* BMSAnalyticsAPI_watchOS.h */,
+				922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI.h */,
 				922CD6981CA08F03002E29C0 /* Info_iOS.plist */,
 				922CD6BB1CA095F2002E29C0 /* Info_watchOS.plist */,
 			);
@@ -139,7 +137,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922CD6991CA08F03002E29C0 /* BMSAnalyticsAPI_iOS.h in Headers */,
+				922CD6991CA08F03002E29C0 /* BMSAnalyticsAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +145,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922CD6BD1CA0964A002E29C0 /* BMSAnalyticsAPI_watchOS.h in Headers */,
+				92369C751CB429B500674B9E /* BMSAnalyticsAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

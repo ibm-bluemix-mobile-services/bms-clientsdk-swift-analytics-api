@@ -12,14 +12,10 @@
 */
 
 
-#import <WatchKit/WatchKit.h>
+@import Foundation;
 
-//! Project version number for BMSAnalyticsAPIWatchOS.
-FOUNDATION_EXPORT double BMSAnalyticsAPIWatchOSVersionNumber;
+//! Project version number for BMSAnalyticsAPI.
+FOUNDATION_EXPORT double BMSAnalyticsAPIVersionNumber;
 
-//! Project version string for BMSAnalyticsAPIWatchOS.
-FOUNDATION_EXPORT const unsigned char BMSAnalyticsAPIWatchOSVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <BMSAnalyticsAPIWatchOS/PublicHeader.h>
-
-
+//! Project version string for BMSAnalyticsAPI.
+FOUNDATION_EXPORT const unsigned char BMSAnalyticsAPIVersionString[];
