@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "922CD6B01CA095B7002E29C0"
-               BuildableName = "BMSAnalyticsAPIWatchOS.framework"
-               BlueprintName = "BMSAnalyticsAPIWatchOS"
+               BlueprintIdentifier = "922CD66F1CA08E00002E29C0"
+               BuildableName = "BMSAnalyticsAPI.framework"
+               BlueprintName = "BMSAnalyticsAPI iOS"
                ReferencedContainer = "container:BMSAnalyticsAPI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "922CD6B01CA095B7002E29C0"
-            BuildableName = "BMSAnalyticsAPIWatchOS.framework"
-            BlueprintName = "BMSAnalyticsAPIWatchOS"
+            BlueprintIdentifier = "922CD66F1CA08E00002E29C0"
+            BuildableName = "BMSAnalyticsAPI.framework"
+            BlueprintName = "BMSAnalyticsAPI iOS"
             ReferencedContainer = "container:BMSAnalyticsAPI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "922CD6B01CA095B7002E29C0"
-            BuildableName = "BMSAnalyticsAPIWatchOS.framework"
-            BlueprintName = "BMSAnalyticsAPIWatchOS"
+            BlueprintIdentifier = "922CD66F1CA08E00002E29C0"
+            BuildableName = "BMSAnalyticsAPI.framework"
+            BlueprintName = "BMSAnalyticsAPI iOS"
             ReferencedContainer = "container:BMSAnalyticsAPI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

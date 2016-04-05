@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "922CD6B01CA095B7002E29C0"
+               BuildableName = "BMSAnalyticsAPI.framework"
+               BlueprintName = "BMSAnalyticsAPI WatchOS"
+               ReferencedContainer = "container:BMSAnalyticsAPI.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "922CD6791CA08E00002E29C0"
-               BuildableName = "BMSAnalyticsAPITests.xctest"
-               BlueprintName = "BMSAnalyticsAPITests"
-               ReferencedContainer = "container:BMSAnalyticsAPI.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <AdditionalOptions>
       </AdditionalOptions>
@@ -36,6 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "922CD6B01CA095B7002E29C0"
+            BuildableName = "BMSAnalyticsAPI.framework"
+            BlueprintName = "BMSAnalyticsAPI WatchOS"
+            ReferencedContainer = "container:BMSAnalyticsAPI.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -45,6 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "922CD6B01CA095B7002E29C0"
+            BuildableName = "BMSAnalyticsAPI.framework"
+            BlueprintName = "BMSAnalyticsAPI WatchOS"
+            ReferencedContainer = "container:BMSAnalyticsAPI.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
