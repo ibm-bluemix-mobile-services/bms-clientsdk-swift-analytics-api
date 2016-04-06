@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		922CD67B1CA08E00002E29C0 /* BMSAnalyticsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922CD6701CA08E00002E29C0 /* BMSAnalyticsAPI.framework */; };
-		922CD6991CA08F03002E29C0 /* BMSAnalyticsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		922CD6BF1CA09837002E29C0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6BE1CA09837002E29C0 /* Logger.swift */; };
 		922CD6C11CA09B5A002E29C0 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C01CA09B5A002E29C0 /* LoggerTests.swift */; };
 		922CD6C51CA0AA54002E29C0 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C41CA0AA54002E29C0 /* Analytics.swift */; };
 		922CD6C61CA0AA54002E29C0 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C41CA0AA54002E29C0 /* Analytics.swift */; };
 		922CD6C71CA0AA57002E29C0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6BE1CA09837002E29C0 /* Logger.swift */; };
-		92369C751CB429B500674B9E /* BMSAnalyticsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92FAA7841CB54F5F00A9EC13 /* BMSAnalyticsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92FAA7851CB54F5F00A9EC13 /* BMSAnalyticsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,7 +137,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922CD6991CA08F03002E29C0 /* BMSAnalyticsAPI.h in Headers */,
+				92FAA7841CB54F5F00A9EC13 /* BMSAnalyticsAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +145,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92369C751CB429B500674B9E /* BMSAnalyticsAPI.h in Headers */,
+				92FAA7851CB54F5F00A9EC13 /* BMSAnalyticsAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,9 +188,9 @@
 			productReference = 922CD67A1CA08E00002E29C0 /* BMSAnalyticsAPI Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		922CD6B01CA095B7002E29C0 /* BMSAnalyticsAPI WatchOS */ = {
+		922CD6B01CA095B7002E29C0 /* BMSAnalyticsAPI watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 922CD6B81CA095B7002E29C0 /* Build configuration list for PBXNativeTarget "BMSAnalyticsAPI WatchOS" */;
+			buildConfigurationList = 922CD6B81CA095B7002E29C0 /* Build configuration list for PBXNativeTarget "BMSAnalyticsAPI watchOS" */;
 			buildPhases = (
 				922CD6AC1CA095B7002E29C0 /* Sources */,
 				922CD6AD1CA095B7002E29C0 /* Frameworks */,
@@ -201,7 +201,7 @@
 			);
 			dependencies = (
 			);
-			name = "BMSAnalyticsAPI WatchOS";
+			name = "BMSAnalyticsAPI watchOS";
 			productName = BMSAnalyticsSpecWatchOS;
 			productReference = 922CD6B11CA095B7002E29C0 /* BMSAnalyticsAPI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -240,7 +240,7 @@
 			projectRoot = "";
 			targets = (
 				922CD66F1CA08E00002E29C0 /* BMSAnalyticsAPI iOS */,
-				922CD6B01CA095B7002E29C0 /* BMSAnalyticsAPI WatchOS */,
+				922CD6B01CA095B7002E29C0 /* BMSAnalyticsAPI watchOS */,
 				922CD6791CA08E00002E29C0 /* BMSAnalyticsAPI Tests */,
 			);
 		};
@@ -409,7 +409,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPI;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPI-iOS";
 				PRODUCT_NAME = BMSAnalyticsAPI;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -428,7 +428,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPI;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPI-iOS";
 				PRODUCT_NAME = BMSAnalyticsAPI;
 				SKIP_INSTALL = YES;
 			};
@@ -440,7 +440,7 @@
 				INFOPLIST_FILE = "Tests/Unit Tests/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPI-Tests";
 				PRODUCT_NAME = "BMSAnalyticsAPI Tests";
 			};
 			name = Debug;
@@ -451,7 +451,7 @@
 				INFOPLIST_FILE = "Tests/Unit Tests/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPI-Tests";
 				PRODUCT_NAME = "BMSAnalyticsAPI Tests";
 			};
 			name = Release;
@@ -469,7 +469,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPIWatchOS;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPI-watchOS";
 				PRODUCT_NAME = BMSAnalyticsAPI;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -492,7 +492,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPIWatchOS;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPI-watchOS";
 				PRODUCT_NAME = BMSAnalyticsAPI;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -531,7 +531,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		922CD6B81CA095B7002E29C0 /* Build configuration list for PBXNativeTarget "BMSAnalyticsAPI WatchOS" */ = {
+		922CD6B81CA095B7002E29C0 /* Build configuration list for PBXNativeTarget "BMSAnalyticsAPI watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				922CD6B61CA095B7002E29C0 /* Debug */,
