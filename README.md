@@ -1,8 +1,8 @@
-IBM Bluemix Mobile Services - AnalyticsSpec Swift SDK
+IBM Bluemix Mobile Services - AnalyticsApi Swift SDK
 ===================================================
 
 ## Contents
-This package contains the AnalyticsSpec components of the Swift SDK for [IBM Bluemix Mobile Services](https://console.ng.bluemix.net/docs/services/mobile.html)
+This package contains the AnalyticsAPI component of the Swift SDK for [IBM Bluemix Mobile Services](https://console.ng.bluemix.net/docs/services/mobile.html)
 
 The package includes
 
@@ -12,12 +12,14 @@ The package includes
 
 ## Requirements
 * iOS 8.0+ / watchOS 2.0+
-* Xcode 7
+* Xcode 7+
 
 ## Installation
 The Bluemix Mobile Services Swift SDKs are available via [Cocoapods](http://cocoapods.org/). 
 
-AnalyticsSpec component will be installed automatically when you install the `BMSCore` pod. To do so add the `BMSCore` pod to your `Podfile`.
+While it is possible to install the `BMSAnalyticsAPI` pod as a stand-alone component the recommended way is to install the `BMSCore` pod, which will include `BMSAnalyticsAPI` as a dependency. Once one of the the above pods is installed you can start using BMSAnalyticsAPI.
+
+Update your Podfile with the pod you want to use and run `pod install`.
 
 ##### iOS
 ```ruby
@@ -49,7 +51,7 @@ logger1.debug("This is a debug message")
 logger2.error("This is an error message")
 logger1.info("This is an info message")
 logger2.warn("This is a warning message")
-logger1.fatal("This is a fatal message. Use it only when application crashes")
+logger1.fatal("This is a fatal message. It is used internally to report application crashes")
 ```
 
 > By default the Bluemix Mobile Service SDK internal debug logging will not be printed to Xcode console. If you want to enable SDK debug logging output set the `Logger.sdkDebugLoggingEnabled` property to `true`. 
