@@ -18,7 +18,7 @@ class LoggerTests: XCTestCase {
     
     func testGetLoggerForName(){
         let name = "sample"
-        let logger = Logger.loggerForName(name)
+        let logger = Logger.logger(forName: name)
         
         XCTAssertTrue(logger.name == Logger.loggerInstances[name]?.name)
     }
@@ -26,8 +26,8 @@ class LoggerTests: XCTestCase {
     // Cannot make any assertions since all these log methods do is print to the console
     // More thorough unit testing for the Logger class is done in the BMSAnalytics SDK
     func testLogMethods(){
-        let fakePKG = "MYPKG"
-        let loggerInstance = Logger.loggerForName(fakePKG)
+        let name = "sample"
+        let loggerInstance = Logger.logger(forName: name)
         Logger.logLevelFilter = LogLevel.Debug
         
         loggerInstance.debug("Hello world")
