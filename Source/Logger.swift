@@ -148,7 +148,8 @@ public class Logger {
         
         - returns: A Logger instance
     */
-    public static func loggerForName(loggerName: String) -> Logger {
+	
+	public static func logger(forName loggerName: String) -> Logger {
         
         if let existingLogger = Logger.loggerInstances[loggerName] {
             return existingLogger

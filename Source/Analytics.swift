@@ -68,7 +68,7 @@ public class Analytics {
     // Public access required by BMSAnalytics framework, which is required to initialize this property
     public static var delegate: AnalyticsDelegate?
     
-    public static let logger = Logger.loggerForName(Logger.bmsLoggerPrefix + "analytics")
+	public static let logger = Logger.logger(forName: Logger.bmsLoggerPrefix + "analytics")
     
     
     
