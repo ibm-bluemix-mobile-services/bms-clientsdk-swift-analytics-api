@@ -8,38 +8,16 @@ The package includes
 
 * Logger and Analytics interfaces
 * Client side Logger implementation
-* Empty stubs for server side related Logger and Analytics functionality. In order to leverage server side functionality you'll need to provision a Mobile Analytics service instance and import [BMSAnalytics SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics)
+* Empty stubs for server side related Logger and Analytics functionality. In order to leverage server side functionality you'll need to provision a Mobile Analytics service instance and import the [BMSAnalytics SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics)
 
 ## Requirements
 * iOS 8.0+ / watchOS 2.0+
 * Xcode 7+
 
 ## Installation
-The Bluemix Mobile Services Swift SDKs are available via [Cocoapods](http://cocoapods.org/). 
+The Bluemix Mobile Services Swift SDKs are available via [Cocoapods](http://cocoapods.org/) and [Carthage](https://github.com/Carthage/Carthage).
 
-While it is possible to install the `BMSAnalyticsAPI` pod as a stand-alone component the recommended way is to install the `BMSCore` pod, which will include `BMSAnalyticsAPI` as a dependency. Once one of the the above pods is installed you can start using BMSAnalyticsAPI.
-
-Update your Podfile with the pod you want to use and run `pod install`.
-
-##### iOS
-```ruby
-use_frameworks!
-
-target 'MyApp' do
-    platform :ios, '8.0'
-    pod 'BMSCore'
-end
-```
-
-##### watchOS
-```ruby
-use_frameworks!
-
-target 'MyApp WatchKit Extension' do
-    platform :watchos, '2.0'
-    pod 'BMSCore'
-end
-```
+While it is possible to install `BMSAnalyticsAPI` as a stand-alone component, the recommended way is to install [BMSCore](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core), which will include `BMSAnalyticsAPI` as a dependency. To install `BMSCore`, follow the installation instructions [here](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core#installation).
 
 ## Usage Examples
 
