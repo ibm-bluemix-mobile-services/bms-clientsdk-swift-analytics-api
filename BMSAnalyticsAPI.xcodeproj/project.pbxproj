@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		922CD67B1CA08E00002E29C0 /* BMSAnalyticsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922CD6701CA08E00002E29C0 /* BMSAnalyticsAPI.framework */; };
 		922CD6BF1CA09837002E29C0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6BE1CA09837002E29C0 /* Logger.swift */; };
-		922CD6C11CA09B5A002E29C0 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C01CA09B5A002E29C0 /* LoggerTests.swift */; };
 		922CD6C51CA0AA54002E29C0 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C41CA0AA54002E29C0 /* Analytics.swift */; };
 		922CD6C61CA0AA54002E29C0 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C41CA0AA54002E29C0 /* Analytics.swift */; };
 		922CD6C71CA0AA57002E29C0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6BE1CA09837002E29C0 /* Logger.swift */; };
+		92BE7D6C1CD7E22B00DC9FA4 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE7D671CD7E22500DC9FA4 /* LoggerTests.swift */; };
 		92FAA7841CB54F5F00A9EC13 /* BMSAnalyticsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92FAA7851CB54F5F00A9EC13 /* BMSAnalyticsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -32,12 +32,12 @@
 		922CD67A1CA08E00002E29C0 /* BMSAnalyticsAPI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMSAnalyticsAPI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSAnalyticsAPI.h; sourceTree = "<group>"; };
 		922CD6981CA08F03002E29C0 /* Info_iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_iOS.plist; sourceTree = "<group>"; };
-		922CD6A61CA090D1002E29C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		922CD6B11CA095B7002E29C0 /* BMSAnalyticsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMSAnalyticsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922CD6BB1CA095F2002E29C0 /* Info_watchOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_watchOS.plist; sourceTree = "<group>"; };
 		922CD6BE1CA09837002E29C0 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		922CD6C01CA09B5A002E29C0 /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
 		922CD6C41CA0AA54002E29C0 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		92BE7D671CD7E22500DC9FA4 /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
+		92BE7D691CD7E22500DC9FA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,24 +108,16 @@
 		922CD6A11CA090D1002E29C0 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				922CD6A31CA090D1002E29C0 /* Unit Tests */,
+				92BE7D671CD7E22500DC9FA4 /* LoggerTests.swift */,
+				92BE7D681CD7E22500DC9FA4 /* Resources */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		922CD6A31CA090D1002E29C0 /* Unit Tests */ = {
+		92BE7D681CD7E22500DC9FA4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				922CD6C01CA09B5A002E29C0 /* LoggerTests.swift */,
-				922CD6A51CA090D1002E29C0 /* Resources */,
-			);
-			path = "Unit Tests";
-			sourceTree = "<group>";
-		};
-		922CD6A51CA090D1002E29C0 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				922CD6A61CA090D1002E29C0 /* Info.plist */,
+				92BE7D691CD7E22500DC9FA4 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -284,7 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922CD6C11CA09B5A002E29C0 /* LoggerTests.swift in Sources */,
+				92BE7D6C1CD7E22B00DC9FA4 /* LoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +429,7 @@
 		922CD6881CA08E00002E29C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "Tests/Unit Tests/Resources/Info.plist";
+				INFOPLIST_FILE = Tests/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPI-Tests";
@@ -448,7 +440,7 @@
 		922CD6891CA08E00002E29C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "Tests/Unit Tests/Resources/Info.plist";
+				INFOPLIST_FILE = Tests/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPI-Tests";
