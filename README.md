@@ -1,46 +1,47 @@
-IBM Bluemix Mobile Services - AnalyticsApi Swift SDK
+IBM Bluemix Mobile Services - Client SDK Swift Analytics
 ===================================================
 
-## Contents
-This package contains the AnalyticsAPI component of the Swift SDK for [IBM Bluemix Mobile Services](https://console.ng.bluemix.net/docs/services/mobile.html)
+[![Build Status](https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics.svg?branch=master)](https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics)
 
-The package includes
+This is the analytics and logger component of the Swift SDK for [IBM Bluemix Mobile Services](https://console.ng.bluemix.net/docs/services/mobile.html).
 
-* Logger and Analytics interfaces
-* Client side Logger implementation
-* Empty stubs for server side related Logger and Analytics functionality. In order to leverage server side functionality you'll need to provision a Mobile Analytics service instance and import the [BMSAnalytics SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics)
 
 ## Requirements
 * iOS 8.0+ / watchOS 2.0+
-* Xcode 7+
+* Xcode 7
+
 
 ## Installation
 The Bluemix Mobile Services Swift SDKs are available via [Cocoapods](http://cocoapods.org/) and [Carthage](https://github.com/Carthage/Carthage).
 
-While it is possible to install `BMSAnalyticsAPI` as a stand-alone component, the recommended way is to install [BMSCore](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core), which will include `BMSAnalyticsAPI` as a dependency. To install `BMSCore`, follow the installation instructions [here](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core#installation).
+#### Cocoapods
+To install BMSAnalytics using Cocoapods, add it to your Podfile:
 
-## Usage Examples
+```ruby
+use_frameworks!
 
-```Swift
-let logger1 = Logger.loggerForName("FirstLogger")
-let logger2 = Logger.loggerForName("SecondLogger")
-
-logger1.debug("This is a debug message")
-logger2.error("This is an error message")
-logger1.info("This is an info message")
-logger2.warn("This is a warning message")
-logger1.fatal("This is a fatal message. It is used internally to report application crashes")
+target 'MyApp' do
+    platform :ios, '8.0'
+    pod 'BMSAnalytics'
+end
 ```
 
-> By default the Bluemix Mobile Service SDK internal debug logging will not be printed to Xcode console. If you want to enable SDK debug logging output set the `Logger.sdkDebugLoggingEnabled` property to `true`. 
+Then run the `pod install` command.
 
-### Disabling Logging output for production applications
+#### Carthage
+To install BMSAnalytics using Carthage, add it to your Cartfile: 
 
-By default the Logger class will print its logs to Xcode console. If is advised to disable Logger output for applications built in release mode. In order to do so add a debug flag named `RELEASE_BUILD` to your release build configuration. One of the way of doing so is adding `-D RELEASE_BUILD` to `Other Swift Flags` section of the project build configuration. 
+```ogdl
+github "ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"
+```
+
+Then run the `carthage update` command. Once the build is finished, drag the `BMSAnalytics.framework`, `BMSCore.framework`, and `BMSAnalyticsAPI.framework` files into your Xcode project. 
+
+To complete the integration, follow the instructions [here](https://github.com/Carthage/Carthage#getting-started).
 
 
 =======================
-Copyright 2016 IBM Corp.
+Copyright 2015 IBM Corp.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
