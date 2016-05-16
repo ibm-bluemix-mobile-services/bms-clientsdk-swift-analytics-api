@@ -14,7 +14,6 @@ before_script:
 script:
   - pod setup
   - pod spec lint --allow-warnings
-  - xcodebuild -scheme 'BMSAnalytics iOS' clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-  - xcodebuild -scheme 'BMSAnalytics watchOS' clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-  - xcodebuild test -scheme 'BMSAnalytics Tests' -destination 'platform=iOS Simulator,name=iPhone 6s'
-
+  - xcodebuild -scheme 'BMSAnalyticsAPI iOS' clean build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO
+  - xcodebuild -scheme 'BMSAnalyticsAPI watchOS' clean build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO
+  - xcodebuild test -scheme 'BMSAnalyticsAPI Tests' -destination 'platform=iOS Simulator,name=iPhone 6s'
