@@ -17,3 +17,5 @@ script:
   - xcodebuild -scheme 'BMSAnalyticsAPI iOS' clean build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO
   - xcodebuild -scheme 'BMSAnalyticsAPI watchOS' clean build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO
   - xcodebuild test -scheme 'BMSAnalyticsAPI Tests' -destination 'platform=iOS Simulator,name=iPhone 6s'
+after_script:
+  - ./travis-build-trigger.sh 7588421 $TRAVIS_BRANCH $AUTH_TOKEN
