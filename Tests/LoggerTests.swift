@@ -30,11 +30,20 @@ class LoggerTests: XCTestCase {
         let loggerInstance = Logger.logger(forName: name)
         Logger.logLevelFilter = LogLevel.Debug
         
+    #if swift(>=3.0)
+        loggerInstance.debug(message: "Hello world")
+        loggerInstance.info(message: "1242342342343243242342")
+        loggerInstance.warn(message: "Str: heyoooooo")
+        loggerInstance.error(message: "1 2 3 4")
+        loggerInstance.fatal(message: "StephenColbert")
+    #else
         loggerInstance.debug("Hello world")
         loggerInstance.info("1242342342343243242342")
         loggerInstance.warn("Str: heyoooooo")
         loggerInstance.error("1 2 3 4")
         loggerInstance.fatal("StephenColbert")
+    #endif
+        
     }
     
 }
