@@ -205,7 +205,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = IBM;
 				TargetAttributes = {
 					922CD66F1CA08E00002E29C0 = {
@@ -423,6 +423,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPI-iOS";
 				PRODUCT_NAME = BMSAnalyticsAPI;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -445,6 +446,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.mobilefirstplatform.clientsdk.swift.BMSAnalyticsAPI-Tests";
 				PRODUCT_NAME = "BMSAnalyticsAPI Tests";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -488,6 +490,7 @@
 				PRODUCT_NAME = BMSAnalyticsAPI;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
