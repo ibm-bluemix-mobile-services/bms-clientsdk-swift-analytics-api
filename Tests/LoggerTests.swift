@@ -16,9 +16,9 @@ import XCTest
 
 class LoggerTests: XCTestCase {
     
-    func testGetLoggerForName(){
+    func testLogger(){
         let name = "sample"
-        let logger = Logger.logger(forName: name)
+        let logger = Logger.logger(name: name)
         
         XCTAssertTrue(logger.name == Logger.loggerInstances[name]?.name)
     }
@@ -27,22 +27,14 @@ class LoggerTests: XCTestCase {
     // More thorough unit testing for the Logger class is done in the BMSAnalytics SDK
     func testLogMethods(){
         let name = "sample"
-        let loggerInstance = Logger.logger(forName: name)
-        Logger.logLevelFilter = LogLevel.Debug
+        let loggerInstance = Logger.logger(name: name)
+        Logger.logLevelFilter = LogLevel.debug
         
-        #if swift(>=3.0)
-            loggerInstance.debug(message: "Hello world")
-            loggerInstance.info(message: "1242342342343243242342")
-            loggerInstance.warn(message: "Str: heyoooooo")
-            loggerInstance.error(message: "1 2 3 4")
-            loggerInstance.fatal(message: "StephenColbert")
-        #else
-            loggerInstance.debug("Hello world")
-            loggerInstance.info("1242342342343243242342")
-            loggerInstance.warn("Str: heyoooooo")
-            loggerInstance.error("1 2 3 4")
-            loggerInstance.fatal("StephenColbert")
-        #endif
+        loggerInstance.debug(message: "Hello world")
+        loggerInstance.info(message: "1242342342343243242342")
+        loggerInstance.warn(message: "Str: heyoooooo")
+        loggerInstance.error(message: "1 2 3 4")
+        loggerInstance.fatal(message: "StephenColbert")
     }
     
 }
