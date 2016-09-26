@@ -11,21 +11,29 @@
 *     limitations under the License.
 */
 
+
+
 import XCTest
 @testable import BMSAnalyticsAPI
 
+
+
 class LoggerTests: XCTestCase {
     
-    func testLogger(){
+    
+    func testLogger() {
+        
         let name = "sample"
         let logger = Logger.logger(name: name)
         
         XCTAssertTrue(logger.name == Logger.loggerInstances[name]?.name)
     }
     
+    
     // Cannot make any assertions since all these log methods do is print to the console
     // More thorough unit testing for the Logger class is done in the BMSAnalytics SDK
-    func testLogMethods(){
+    func testLogMethods() {
+        
         let name = "sample"
         let loggerInstance = Logger.logger(name: name)
         Logger.logLevelFilter = LogLevel.debug
