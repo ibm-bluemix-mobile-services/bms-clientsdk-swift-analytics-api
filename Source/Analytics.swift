@@ -32,6 +32,9 @@ public enum DeviceEvent {
     ///
     /// - Note: Only available for iOS apps. For watchOS apps, call the `recordApplicationDidBecomeActive()` and `recordApplicationWillResignActive()` methods in the appropriate `ExtensionDelegate` methods.
     case lifecycle
+    
+    /// Records metadata for network requests created with the `BMSURLSession` API in the `BMSCore` framework.
+    case network
 }
 
 
@@ -126,6 +129,9 @@ public enum DeviceEvent {
     ///
     /// - Note: Only available for iOS apps. For watchOS apps, call the `recordApplicationDidBecomeActive()` and `recordApplicationWillResignActive()` methods in the appropriate `ExtensionDelegate` methods.
     case lifecycle
+    
+    /// Records metadata for network requests created with the `BMSURLSession` API in the `BMSCore` framework.
+    case network
 }
 
 
