@@ -6,17 +6,21 @@ matrix:
 install:
   - gem install cocoapods
   - brew install jq
+before_script:
+  # Allow Travis to push to Github
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GITHUB}:@github.com" >> .git/credentials
 script:
   # - pod spec lint
   # - xcodebuild -scheme 'BMSAnalyticsAPI iOS' clean build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO
   # - xcodebuild -scheme 'BMSAnalyticsAPI watchOS' clean build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO
   # - xcodebuild test -scheme 'BMSAnalyticsAPI Tests' -destination 'platform=iOS Simulator,name=iPhone 6s'
-  # When merging to master branch, add a git tag and publish to Cocoapods
+  # When merging to the master branch, add a git tag and publish to Cocoapods
     - if [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "travis-master" ] && [[ "${TRAVIS_JOB_NUMBER}" = *".2"* ]]; then
         version=$(pod spec cat BMSAnalyticsAPI | jq '.version');
         git_tags=$(git tag);
         if [[ ! " ${array[@]} " =~ " ${version} " ]]; then
-          echo "ANTHONY WAS HERE";
+          echo "PUBLISHING NEW VERSION";
           git tag $version;
           git push origin --tags;
           pod trunk push;
