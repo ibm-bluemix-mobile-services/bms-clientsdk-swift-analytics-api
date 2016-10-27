@@ -11,16 +11,14 @@ script:
   # - xcodebuild -scheme 'BMSAnalyticsAPI iOS' clean build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO
   # - xcodebuild -scheme 'BMSAnalyticsAPI watchOS' clean build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO
   # - xcodebuild test -scheme 'BMSAnalyticsAPI Tests' -destination 'platform=iOS Simulator,name=iPhone 6s'
-
-  # git tag $VERSION;
-  # git push origin --tags;
-  # pod trunk push;
-
   # When merging to master branch, add a git tag and publish to Cocoapods
-    - if [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "travis" ] && [[ "${TRAVIS_JOB_NUMBER}" = *".2"* ]]; then
+    - if [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "travis-master" ] && [[ "${TRAVIS_JOB_NUMBER}" = *".2"* ]]; then
         version=$(pod spec cat BMSAnalyticsAPI | jq '.version');
         git_tags=$(git tag);
         if [[ ! " ${array[@]} " =~ " ${version} " ]]; then
           echo "ANTHONY WAS HERE";
+          git tag $version;
+          git push origin --tags;
+          pod trunk push;
         fi
       fi
