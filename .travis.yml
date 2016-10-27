@@ -19,10 +19,7 @@ script:
     - if [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "travis-master" ] && [[ "${TRAVIS_JOB_NUMBER}" = *".2"* ]]; then
         version=$(pod spec cat BMSAnalyticsAPI | jq '.version');
         git_tags=$(git tag);
-        if [[ ! " ${array[@]} " =~ " ${version} " ]]; then
+        if [[ ! ${git_tags[*]} =~ ${version} ]]; then
           echo "Publishing new version ${version} ";
-          git tag $version;
-          git push origin --tags;
-          pod trunk push;
         fi
       fi
