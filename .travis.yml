@@ -18,6 +18,7 @@ script:
   # When merging to the master branch, add a git tag and publish to Cocoapods
     - if [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "travis-master" ] && [[ "${TRAVIS_JOB_NUMBER}" = *".2"* ]]; then
         version=$(pod spec cat BMSAnalyticsAPI | jq '.version');
+        git fetch --tags;
         git_tags=$(git tag);
         if [[ ! ${git_tags[*]} =~ ${version} ]]; then
           echo "Publishing new version ${version} ";
