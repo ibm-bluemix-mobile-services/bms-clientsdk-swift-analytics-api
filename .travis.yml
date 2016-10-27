@@ -20,7 +20,7 @@ script:
         version=$(pod spec cat BMSAnalyticsAPI | jq '.version');
         git_tags=$(git tag);
         if [[ ! " ${array[@]} " =~ " ${version} " ]]; then
-          echo "Publishing new version: ${version} ";
+          echo "Publishing new version ${version} ";
           git tag $version;
           git push origin --tags;
           pod trunk push;
