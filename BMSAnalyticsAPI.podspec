@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'BMSAnalyticsAPI'
-  s.version      = '2.1.1'
+  s.version      = '2.1.2'
   s.summary      = 'The analytics and logger APIs of the Swift client SDK for IBM Bluemix Mobile Services'
   s.homepage     = 'https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics-api'
   s.license      = 'Apache License, Version 2.0'
