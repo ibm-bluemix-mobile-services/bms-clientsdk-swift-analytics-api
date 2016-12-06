@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920D57BE1DF75F4700923C21 /* RequestMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D57BD1DF75F4700923C21 /* RequestMetadata.swift */; };
+		920D57BF1DF75F4700923C21 /* RequestMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D57BD1DF75F4700923C21 /* RequestMetadata.swift */; };
+		920D57C31DF75F7F00923C21 /* RequestMetadataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D57C01DF75F5D00923C21 /* RequestMetadataTests.swift */; };
 		922CD67B1CA08E00002E29C0 /* BMSAnalyticsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922CD6701CA08E00002E29C0 /* BMSAnalyticsAPI.framework */; };
 		922CD6BF1CA09837002E29C0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6BE1CA09837002E29C0 /* Logger.swift */; };
 		922CD6C51CA0AA54002E29C0 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CD6C41CA0AA54002E29C0 /* Analytics.swift */; };
@@ -28,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		920D57BD1DF75F4700923C21 /* RequestMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMetadata.swift; sourceTree = "<group>"; };
+		920D57C01DF75F5D00923C21 /* RequestMetadataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMetadataTests.swift; sourceTree = "<group>"; };
 		922CD6701CA08E00002E29C0 /* BMSAnalyticsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMSAnalyticsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922CD67A1CA08E00002E29C0 /* BMSAnalyticsAPI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMSAnalyticsAPI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		922CD6971CA08F03002E29C0 /* BMSAnalyticsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSAnalyticsAPI.h; sourceTree = "<group>"; };
@@ -90,6 +95,7 @@
 			children = (
 				922CD6BE1CA09837002E29C0 /* Logger.swift */,
 				922CD6C41CA0AA54002E29C0 /* Analytics.swift */,
+				920D57BD1DF75F4700923C21 /* RequestMetadata.swift */,
 				922CD6961CA08F03002E29C0 /* Resources */,
 			);
 			path = Source;
@@ -109,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				92BE7D671CD7E22500DC9FA4 /* LoggerTests.swift */,
+				920D57C01DF75F5D00923C21 /* RequestMetadataTests.swift */,
 				92BE7D681CD7E22500DC9FA4 /* Resources */,
 			);
 			path = Tests;
@@ -270,6 +277,7 @@
 			files = (
 				922CD6BF1CA09837002E29C0 /* Logger.swift in Sources */,
 				922CD6C51CA0AA54002E29C0 /* Analytics.swift in Sources */,
+				920D57BE1DF75F4700923C21 /* RequestMetadata.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920D57C31DF75F7F00923C21 /* RequestMetadataTests.swift in Sources */,
 				92BE7D6C1CD7E22B00DC9FA4 /* LoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +296,7 @@
 			files = (
 				922CD6C61CA0AA54002E29C0 /* Analytics.swift in Sources */,
 				922CD6C71CA0AA57002E29C0 /* Logger.swift in Sources */,
+				920D57BF1DF75F4700923C21 /* RequestMetadata.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
