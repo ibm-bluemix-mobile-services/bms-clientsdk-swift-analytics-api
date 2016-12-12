@@ -70,8 +70,8 @@ public class Analytics {
     public static var isEnabled: Bool = true
     
     /// Determines whether Analytics should monitor the user's current location.
-    /// `Analytics` only gets location with one kilometer accuracy and updates infrequently, so there should be minimal effect on battery life.
-    /// - Important: Before location can be retrieved, you must first request permission from the user with `CLLocationManager` `requestAlwaysAuthorization()`.
+    /// `Analytics` only gets location with one kilometer accuracy and updates infrequently, so there should be minimal impact on battery life.
+    /// - Important: Before location can be retrieved, you must first request permission from the user with `CLLocationManager` `requestWhenInUseAuthorization()`.
     public static var locationEnabled: Bool = false
     
     /// Identifies the current application user.
@@ -181,8 +181,8 @@ public class Analytics {
     public static var isEnabled: Bool = true
     
     /// Determines whether Analytics should monitor the user's current location.
-    /// `Analytics` only gets location with one kilometer accuracy and updates infrequently, so there should be minimal effect on battery life.
-    /// - Important: Before location can be retrieved, you must first request permission from the user with `CLLocationManager` `requestAlwaysAuthorization()`.
+    /// `Analytics` only gets location with one kilometer accuracy and updates infrequently, so there should be minimal impact on battery life.
+    /// - Important: Before location can be retrieved, you must first request permission from the user with `CLLocationManager` `requestWhenInUseAuthorization()`.
     public static var locationEnabled: Bool = false
     
     /// Identifies the current application user.
