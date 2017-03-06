@@ -1,0 +1,6 @@
+coverage_service: coveralls
+xcodeproj: BMSAnalyticsAPI.xcodeproj
+scheme: BMSAnalyticsAPI iOS
+build_directory: Build/
+ignore:
+  - Tests/*
