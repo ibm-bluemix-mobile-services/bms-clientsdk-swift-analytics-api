@@ -7,7 +7,6 @@ before_install:
   - rvm install 2.4.0
 install:
   - gem install slather
-  - bundle install --without=documentation --path ../travis_bundle_dir
 script:
   - pod lib lint
   - xcodebuild -scheme 'BMSAnalyticsAPI iOS' clean build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO
