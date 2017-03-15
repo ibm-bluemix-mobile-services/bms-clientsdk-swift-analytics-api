@@ -5,6 +5,7 @@ BMSAnalyticsAPI provides interfaces and basic implementation of Logger and Analy
 
 [![Build Status](https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics-api.svg?branch=master)](https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics-api)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/28b6315364374afa8bbfc21b6636ce7d)](https://www.codacy.com/app/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics-api?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics-api&amp;utm_campaign=Badge_Grade)
+[![Coverage Status](https://coveralls.io/repos/github/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics-api/badge.svg?branch=travis-fix)](https://coveralls.io/github/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics-api?branch=travis-fix)
 
 =======================
 Copyright 2015 IBM Corp.
