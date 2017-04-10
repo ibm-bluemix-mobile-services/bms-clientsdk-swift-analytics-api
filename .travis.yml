@@ -21,7 +21,6 @@ script:
       xcodebuild test -scheme 'BMSAnalyticsAPI Tests' -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.1';
     fi
   # For Xcode 8, test with iOS 10.1
-  # Output test results to the Build/ directory so that slather can gather test code coverage
   - if [[ "${TRAVIS_JOB_NUMBER}" = *".2"* ]]; then
       xcodebuild test -scheme 'BMSAnalyticsAPI Tests' -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.1';
     fi

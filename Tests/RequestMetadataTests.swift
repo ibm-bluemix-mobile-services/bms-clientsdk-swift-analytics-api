@@ -47,13 +47,13 @@ class RequestMetadataTests: XCTestCase {
             requestMetadata.endTime = Int64(Date.timeIntervalSinceReferenceDate * 1000)
             
             let combinedMetadata: [String: Any] = requestMetadata.combinedMetadata
-            let endTime = combinedMetadata["$inboundTimestamp"] as! Int
+            let endTime = combinedMetadata["$inboundTimestamp"] as! Int64
             
             XCTAssertEqual(combinedMetadata["$category"] as! String, "network")
             XCTAssertEqual(combinedMetadata["$trackingid"] as! String, trackingId)
-            XCTAssertEqual(combinedMetadata["$outboundTimestamp"] as! Int, Int(startTime))
-            XCTAssertGreaterThan(endTime, Int(startTime))
-            XCTAssertEqual(combinedMetadata["$roundTripTime"] as! Int, endTime - Int(startTime))
+            XCTAssertEqual(combinedMetadata["$outboundTimestamp"] as! Int64, startTime)
+            XCTAssertGreaterThan(endTime, startTime)
+            XCTAssertEqual(combinedMetadata["$roundTripTime"] as! Int64, endTime - startTime)
             XCTAssertEqual(combinedMetadata["$bytesSent"] as! Int, Int(bytesSent))
             XCTAssertEqual(combinedMetadata["$bytesReceived"] as! Int, Int(bytesReceived))
             XCTAssertEqual(combinedMetadata["$path"] as! String, url.absoluteString)
@@ -82,7 +82,7 @@ class RequestMetadataTests: XCTestCase {
             
             XCTAssertEqual(combinedMetadata["$category"] as! String, "network")
             XCTAssertEqual(combinedMetadata["$trackingid"] as! String, trackingId)
-            XCTAssertEqual(combinedMetadata["$outboundTimestamp"] as! Int, Int(startTime))
+            XCTAssertEqual(combinedMetadata["$outboundTimestamp"] as! Int64, startTime)
             XCTAssertEqual(combinedMetadata["$inboundTimestamp"] as! Int, 0)
             XCTAssertEqual(combinedMetadata["$roundTripTime"] as! Int, 0)
             XCTAssertEqual(combinedMetadata["$bytesSent"] as! Int, 0)
