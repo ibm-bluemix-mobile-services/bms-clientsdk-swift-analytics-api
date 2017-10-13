@@ -40,7 +40,7 @@ public struct RequestMetadata {
     // The response received.
     public var response: URLResponse? = nil
     
-    //The request sent
+    // The request sent
     public var requestMethod: String? = nil
 
     // The time at which the request is considered complete.
