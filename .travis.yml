@@ -13,7 +13,7 @@ install:
   - gem install cocoapods
 
 script:
-  - pod lib lint
+  - pod lib lint --allow-warnings
   - xcodebuild -scheme 'BMSAnalyticsAPI iOS' clean build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO
   - xcodebuild -scheme 'BMSAnalyticsAPI watchOS' clean build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO
   # For Xcode 7, test with iOS 8.1
