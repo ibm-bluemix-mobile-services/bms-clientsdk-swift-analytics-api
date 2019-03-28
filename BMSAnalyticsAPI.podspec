@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'BMSAnalyticsAPI'
-  s.version      = '2.3.0'
+  s.version      = '2.3.1'
   s.summary      = 'The analytics and logger APIs of the Swift client SDK for IBM Bluemix Mobile Services'
   s.homepage     = 'https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics-api'
   s.license      = 'Apache License, Version 2.0'
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.ios.deployment_target = '9.0'
-  s.watchos.deployment_target = '3.0'
+  s.ios.deployment_target = '8.0'
+  s.watchos.deployment_target = '2.0'
 
 end
